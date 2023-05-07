@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 4 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omar-will/Ohmyfood.git"
+  },
+  "author": "Omar-will",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Omar-will/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Omar-will/Ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
