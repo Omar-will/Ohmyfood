@@ -2,10 +2,11 @@
 @use "../utils/colors";
 @use "../utils/mixins";
 
-
+#homepage {
 .menus {
   background-color: #f6f6f6;
   margin-bottom: 2rem;
+  
 
   .menus__cards {
     display: grid;
@@ -44,19 +45,7 @@
       }
     }
     &__description {
-      position: relative;
-      background-color: white;
-      border-radius: 0 0 1rem 1rem;
-      &::before {
-        @include mixins.heart;
-      }
-      &::after {
-        @include mixins.heart($opacity: 0, $font-weight: 900, $color:transparent);
-        @include mixins.gradient(1);
-      }
-      &:hover::after {
-        opacity: 1;
-        transform: translateY(-50%) scale(1.2);
+      @include mixins.heart-animated
       }
 
       h3,
