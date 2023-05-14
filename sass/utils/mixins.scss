@@ -16,6 +16,10 @@
     transform: scale(1.02);
 }
 
+@mixin transform-zoom2($zoom-level: 1.02, $transformation: none) {
+  transform: scale($zoom-level) $transformation;
+}
+
 @mixin font-awesome($font-weight: 400) {
   display: inline-block;
   position: absolute;

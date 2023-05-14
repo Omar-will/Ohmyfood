@@ -89,6 +89,39 @@ header {
   opacity: 0.9;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 200ms 2s forwards;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #9356dc;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out;
+  animation-iteration-count: 2;
+}
+
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .tuto {
   counter-reset: steps;
   margin-bottom: 2rem;
@@ -255,10 +288,23 @@ footer i {
   margin-right: 10px;
 }
 
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 body {
   background-color: #f6f6f6;
 }
 
+#page-resto header:hover::before {
+  transform: scale(1.2) translateY(-50%);
+}
 #page-resto header::before {
   display: inline-block;
   position: absolute;
@@ -273,6 +319,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
+  transition: transform 200ms;
 }
 #page-resto .banner img {
   display: block;
@@ -365,10 +412,22 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
+  animation: appear 1s;
+  animation-fill-mode: both;
 }
 #page-resto .menu__category .menu-item {
   display: flex;
   overflow: hidden;
+  animation: appear 1.5s;
+}
+#page-resto .menu__category .menu-item:nth-child(1) {
+  animation-delay: 100ms;
+}
+#page-resto .menu__category .menu-item:nth-child(2) {
+  animation-delay: 200ms;
+}
+#page-resto .menu__category .menu-item:nth-child(3) {
+  animation-delay: 300ms;
 }
 #page-resto .menu__category .menu-item .menu-item__price {
   margin-left: auto;
