@@ -4,7 +4,8 @@
   "description": "projet 4 ",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch styles.scss styles.css"
+    "sass": "sass --watch styles.scss styles.css",
+    "build": "postcss styles.css -o ./build/styles.min.css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/Omar-will/Ohmyfood#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
     "sass": "^1.62.1"
   }
 }

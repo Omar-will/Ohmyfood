@@ -2,38 +2,47 @@
 @use "../utils/colors";
 @use "../utils/animations";
 
-body {
-  background-color: colors.$lightergrey;
-}
-
+// *{
+//    box-shadow: 0 0 0 3px red inset;
+//  }
 #page-resto {
+
   header {
     &:hover::before {
-      @include mixins.transform-zoom2 ($zoom-level: 1.2, $transformation: translateY(-50%))
+      @include mixins.transform-zoom2(
+        $zoom-level: 1.2,
+        $transformation: translateY(-50%)
+      );
     }
     &::before {
-        @include mixins.font-awesome(900);
-        content: "\f060";
-        left: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 20px;
-        transition: transform 200ms;
+      @include mixins.font-awesome(900);
+      content: "\f060";
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      transition: transform 200ms;
     }
-}
+  }
   .banner img {
     display: block;
     width: 100%;
-    height: 60vh;
+    height: 35vh;
     object-fit: cover;
     object-position: center;
   }
 
   .restaurant__title {
+    
     margin-top: -2rem;
+    background-color: colors.$lightergrey;
+    .restaurant__title::before {
+      background-color: white;
+    }
     h2 {
       font-family: "Shrikhand", "sans-serif";
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
+      font-size: 28px;
       @include mixins.heart-animated;
       background-color: colors.$lightergrey;
       border-radius: 2rem 2rem 0 0;
@@ -41,16 +50,19 @@ body {
   }
 
   .restaurant-main {
-    padding: 0 1rem;
+  background-color: colors.$lightergrey;
+    margin-bottom: -3.6rem;
+  
   }
   .menus {
     display: grid;
-    grid-template-columns: repeat(3);
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   h3 {
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 200;
+    margin: 1.5rem 0 0.5rem 0;
     position: relative;
     &::after {
       content: "";
@@ -78,7 +90,7 @@ body {
         }
       }
       animation: appear 1.5s;
-     
+
       .menu-item__price {
         margin-left: auto;
         font-weight: 900;
@@ -129,12 +141,59 @@ body {
       }
     }
   }
-  section.order {
+  div.order {
     height: 25vh;
     display: grid;
     place-items: center;
+    margin-top: 0;
     button {
-      @include mixins.base-button;
+      @include mixins.base-button2;
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 3rem;
     }
   }
 }
+
+ @media (min-width: 1050px) {
+    .restaurant__title {
+      border-radius: 2rem 2rem 0 0;
+      margin-left: 20rem;
+      margin-right: 20rem;
+     
+      }
+     h2 {
+       
+       text-align: center;
+     }
+   .restaurant-main {
+      background-color: colors.$lightergrey;
+      margin-bottom: -3.6rem;
+      margin-left: 20rem;
+      margin-right: 20rem;
+      }
+     footer {
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: flex-end;
+       margin-top: 0;
+
+       h2 {
+         order: 1;
+         margin-left: 4rem;
+       }
+       p,
+       h2 {
+         gap: 1rem;
+
+         .paragraph1 {
+           gap: 1rem;
+         }
+       }
+       i {
+         margin-right: 5px;
+       }
+     }
+   }
+

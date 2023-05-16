@@ -59,23 +59,27 @@ header {
 .city i {
   font-size: 24px;
 }
+.city h2 {
+  font-size: 1rem;
+}
 
 /* EXPLORER */
 .explorer {
   text-align: center;
+  margin: 2rem;
 }
 .explorer h2 {
-  margin-top: 32px;
-  font-size: 32px;
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 .explorer p {
-  font-size: 16px;
+  font-size: 1.3rem;
 }
 .explorer button {
   color: white;
   font-weight: 300;
   font-size: 1.5rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1.7rem;
   margin-top: 1rem;
   border: none;
   border-radius: 2rem;
@@ -83,9 +87,10 @@ header {
   cursor: pointer;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  font-size: 1.1rem;
 }
 .explorer button:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
   opacity: 0.9;
 }
 
@@ -99,7 +104,7 @@ header {
   z-index: 1;
   opacity: 0.9;
   animation: disappear 200ms 2s forwards;
-  transform-origin: top;
+  transform-origin: center;
 }
 .loader::after {
   content: "";
@@ -161,6 +166,10 @@ header {
 }
 .tuto li:hover {
   transform: scale(1.02);
+  background-color: #f2eafb;
+}
+.tuto li:hover i::before {
+  color: #9356dc;
 }
 .tuto li i.fas {
   margin-right: 1rem;
@@ -264,6 +273,7 @@ header {
 #homepage .menus .card__description:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.2);
+  animation: fill-heart 2s ease-in-out forwards;
 }
 #homepage .menus .card h3,
 #homepage .menus .card p {
@@ -298,10 +308,6 @@ footer i {
     opacity: 1;
   }
 }
-body {
-  background-color: #f6f6f6;
-}
-
 #page-resto header:hover::before {
   transform: scale(1.2) translateY(-50%);
 }
@@ -324,16 +330,21 @@ body {
 #page-resto .banner img {
   display: block;
   width: 100%;
-  height: 60vh;
+  height: 35vh;
   object-fit: cover;
   object-position: center;
 }
 #page-resto .restaurant__title {
   margin-top: -2rem;
+  background-color: #f6f6f6;
+}
+#page-resto .restaurant__title .restaurant__title::before {
+  background-color: white;
 }
 #page-resto .restaurant__title h2 {
   font-family: "Shrikhand", "sans-serif";
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
+  font-size: 28px;
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
@@ -384,18 +395,21 @@ body {
 #page-resto .restaurant__title h2:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.2);
+  animation: fill-heart 2s ease-in-out forwards;
 }
 #page-resto .restaurant-main {
-  padding: 0 1rem;
+  background-color: #f6f6f6;
+  margin-bottom: -3.6rem;
 }
 #page-resto .menus {
   display: grid;
-  grid-template-columns: repeat(3);
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 #page-resto h3 {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 200;
+  margin: 1.5rem 0 0.5rem 0;
   position: relative;
 }
 #page-resto h3::after {
@@ -483,27 +497,70 @@ body {
     transform: rotate(0);
   }
 }
-#page-resto section.order {
+#page-resto div.order {
   height: 25vh;
   display: grid;
   place-items: center;
+  margin-top: 0;
 }
-#page-resto section.order button {
+#page-resto div.order button {
   color: white;
   font-weight: 300;
   font-size: 1.5rem;
-  padding: 1rem 2rem;
-  margin-top: 1rem;
+  padding: 1rem 3.5rem;
+  margin-top: 0.5rem;
   border: none;
   border-radius: 2rem;
   transition: transform 200ms;
   cursor: pointer;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
 }
-#page-resto section.order button:hover {
-  transform: scale(1.02);
+#page-resto div.order button:hover {
+  transform: scale(1.05);
   opacity: 0.9;
+}
+
+@media (min-width: 1050px) {
+  .restaurant__title {
+    border-radius: 2rem 2rem 0 0;
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+  h2 {
+    text-align: center;
+  }
+  .restaurant-main {
+    background-color: #f6f6f6;
+    margin-bottom: -3.6rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+  footer h2 {
+    order: 1;
+    margin-left: 4rem;
+  }
+  footer p,
+  footer h2 {
+    gap: 1rem;
+  }
+  footer p .paragraph1,
+  footer h2 .paragraph1 {
+    gap: 1rem;
+  }
+  footer i {
+    margin-right: 5px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
