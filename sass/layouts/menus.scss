@@ -3,55 +3,83 @@
 @use "../utils/mixins";
 
 #homepage {
-.menus {
-  background-color: #f6f6f6;
-  margin-bottom: 2rem;
-  
+  .menus {
+    background-color: #f6f6f6;
+    padding: 0 0 5rem 0;
+    h2 {
+      padding: 3rem 0 2rem 1rem;
+    }
 
-  .menus__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    @media (max-width: variables.$breakpoint) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .new {
-      position: relative;
-    }
-    .new::before {
-      content: "Nouveau";
-      position: absolute;
-      height: 2rem;
-      width: 5rem;
-      background-color: colors.$color-tertiary;
-      color: darken(colors.$color-tertiary, 50%);
+    .menus__cards {
       display: grid;
-      place-items: center;
-      right: 1rem;
-      top: 1rem;
-    }
-  }
-
-  .card {
-    &__image {
-      height: 15rem;
-      border-radius: 1rem 1rem 0 0;
-      background-size: cover;
-      background-position: 20%;
-    } 
-    @for $i from 1 through 4 {
-      &__image-#{$i} {
-        background-image: url("images/restaurants/image-#{$i}.jpg");
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      @media (max-width: variables.$breakpoint) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .new {
+        position: relative;
+      }
+      .new::before {
+        content: "Nouveau";
+        position: absolute;
+        height: 2rem;
+        width: 6rem;
+        border-radius: 0.1rem;
+        background-color: colors.$color-tertiary;
+        color: darken(colors.$color-tertiary, 50%);
+        display: grid;
+        place-items: center;
+        right: 2rem;
+        top: 1rem;
       }
     }
-    &__description {
-      @include mixins.heart-animated
+
+    .card {
+      padding: 0 1rem 0 1rem;
+      &__image {
+        height: 15rem;
+        border-radius: 1rem 1rem 0 0;
+        background-size: cover;
+        background-position: 20%;
+      }
+      @for $i from 1 through 4 {
+        &__image-#{$i} {
+          background-image: url("images/restaurants/image-#{$i}.jpg");
+        }
+      }
+      &__description {
+        @include mixins.heart-animated;
+        background-color: white;
+        border-radius: 0 0 1rem 1rem;
+        padding: 1rem;
       }
 
       h3,
       p {
-        padding: 0.3rem;
-        margin-left: 10px;
+        padding: 0.1rem;
+        margin-left: 3px;
+        font-size: 19px;
+      }
+      .heart {
+        margin-right: 5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+  #homepage {
+    .menus {
+      padding: 0rem 8rem 1rem 8rem;
+      h2 {
+        padding: 3rem 0 2rem 1rem;
+      }
+      .card {
+        margin: 0rem 2rem 2rem 0rem;
+        min-width: 100%;
+        max-width: 50rem;
+        width: 100%;
       }
     }
   }

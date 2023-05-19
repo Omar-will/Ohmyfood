@@ -2,12 +2,12 @@
 @use "../utils/colors";
 @use "../utils/animations";
 
-// *{
-//    box-shadow: 0 0 0 3px red inset;
-//  }
+*{
+    box-shadow: 0 0 0 3px red inset;
+ }
 #page-resto {
-
   header {
+    padding-top: 1rem;
     &:hover::before {
       @include mixins.transform-zoom2(
         $zoom-level: 1.2,
@@ -32,37 +32,55 @@
     object-position: center;
   }
 
-  .restaurant__title {
-    
-    margin-top: -2rem;
+  .restaurant-main {
+    position: relative;
     background-color: colors.$lightergrey;
-    .restaurant__title::before {
-      background-color: white;
+    padding: 0.1rem 1rem 1rem 1rem;
+    margin-top: -2rem;
+    border-radius: 2rem 2rem 0 0;
+    .far.fa-heart {
+      position: absolute;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      right: 0;
+      font-size: 2rem;
+      margin-right: 3rem;
+      margin-top: -2.4rem;
+    }
+    .fas.fa-heart {
+      position: absolute;
+      right: 0;
+      font-size: 2rem;
+      margin-right: 3rem;
+      margin-top: -2.4rem;
+      color: transparent;
+      @include mixins.gradient(1);
+      background-clip: text;
+      opacity: 0;
+      transition: all 200ms ease-in-out;
+    }
+    & > .fas.fa-heart:hover {
+      opacity: 1;
+      transform: translateY(0%) scale(1.2);
     }
     h2 {
       font-family: "Shrikhand", "sans-serif";
-      padding: 2.5rem 1rem;
-      font-size: 28px;
-      @include mixins.heart-animated;
+      font-size: 31px;
       background-color: colors.$lightergrey;
-      border-radius: 2rem 2rem 0 0;
+      margin-top: 2.5rem;
+      margin-right: 3.5rem;
     }
-  }
-
-  .restaurant-main {
-  background-color: colors.$lightergrey;
-    margin-bottom: -3.6rem;
-  
   }
   .menus {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin-top: 1rem;
   }
   h3 {
     text-transform: uppercase;
     font-weight: 200;
-    margin: 1.5rem 0 0.5rem 0;
+    margin: 1.5rem 0 0.5rem 0.1rem;
     position: relative;
     &::after {
       content: "";
@@ -82,6 +100,7 @@
     animation: appear 1s;
     animation-fill-mode: both;
     .menu-item {
+      height: 4.8rem;
       display: flex;
       overflow: hidden;
       @for $i from 1 through 3 {
@@ -90,27 +109,35 @@
         }
       }
       animation: appear 1.5s;
-
       .menu-item__price {
         margin-left: auto;
         font-weight: 900;
+        font-size: 1.1rem;
         padding: 1rem;
         display: flex;
         align-items: flex-end;
       }
       .menu-item__description {
-        padding: 1rem;
+        padding: 0.8rem;
         overflow: hidden;
         h4,
         p {
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+          padding: 0.1rem;
+        }
+        h4 {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+        p {
+          font-size: 1.1rem;
         }
       }
       .menu-item__check {
         display: grid;
-        height: 4.5rem;
+        height: 4.8rem;
         flex-shrink: 0;
         place-items: center;
         $button-width: 4rem;
@@ -145,55 +172,69 @@
     height: 25vh;
     display: grid;
     place-items: center;
-    margin-top: 0;
+    margin-top: -1rem;
+    margin-bottom: -1.5rem;
     button {
       @include mixins.base-button2;
       font-size: 1.1rem;
-      margin-top: 0;
-      margin-bottom: 3rem;
     }
   }
 }
 
- @media (min-width: 1050px) {
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  #page-resto {
     .restaurant__title {
+      min-width: 80%;
       border-radius: 2rem 2rem 0 0;
-      margin-left: 20rem;
-      margin-right: 20rem;
-     
-      }
-     h2 {
-       
-       text-align: center;
-     }
-   .restaurant-main {
+      margin-left: 10rem;
+      margin-right: 10rem;
+    }
+    h2 {
+      text-align: center;
+    }
+    .fas.fa-heart {
+    align-items: center;
+    }
+    .restaurant-main {
+      min-width: 80%;
       background-color: colors.$lightergrey;
-      margin-bottom: -3.6rem;
-      margin-left: 20rem;
-      margin-right: 20rem;
+      margin-left: 10rem;
+      margin-right: 10rem;
+    }
+    .menus {
+      margin-left: 10rem;
+      margin-right: 10rem;
+    }
+    .menu__category {
+      min-width: 50%;
+    }
+    footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 0;
+      padding-top: 1.8rem;
+      gap: 1rem;
+
+      .paragraph-1 {
+        gap: 4rem;
+        margin-right: 2.5rem;
       }
-     footer {
-       display: flex;
-       flex-direction: row;
-       align-items: center;
-       justify-content: flex-end;
-       margin-top: 0;
 
-       h2 {
-         order: 1;
-         margin-left: 4rem;
-       }
-       p,
-       h2 {
-         gap: 1rem;
-
-         .paragraph1 {
-           gap: 1rem;
-         }
-       }
-       i {
-         margin-right: 5px;
-       }
-     }
-   }
-
+      h3 {
+        order: 1;
+        margin-left: 5rem;
+        margin-right: 1.5rem;
+        margin-top: -0.6rem;
+      }
+      p,
+      h3 {
+        gap: 2rem;
+      }
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}

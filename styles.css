@@ -12,11 +12,11 @@ body {
 }
 
 main {
-  padding: 0 7rem;
+  padding: 0 0rem;
 }
 @media (max-width: 1000px) {
   main {
-    padding: 0 1rem;
+    padding: 0 0rem;
   }
 }
 
@@ -31,7 +31,7 @@ h6, p {
 }
 
 h2 {
-  padding: 2rem 0;
+  padding: 0rem 0;
 }
 
 a {
@@ -53,27 +53,31 @@ header {
   text-align: center;
   justify-content: center;
   gap: 16px;
-  background-color: #f3f3f3;
-  padding: 8px;
+  background-color: rgb(232, 232, 232);
+  padding: 1rem;
 }
 .city i {
-  font-size: 24px;
+  font-size: 20px;
 }
 .city h2 {
-  font-size: 1rem;
+  font-size: 17px;
+  font-weight: lighter;
 }
 
 /* EXPLORER */
 .explorer {
+  background-color: #f3f3f3;
   text-align: center;
-  margin: 2rem;
+  margin: -1rem 0rem -0.5rem 0rem;
 }
 .explorer h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
+  margin: 0.8rem 3rem 1rem 3rem;
+  padding-top: 3rem;
+  font-size: 2rem;
 }
 .explorer p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  margin: 0rem 1rem 1rem 1rem;
 }
 .explorer button {
   color: white;
@@ -88,6 +92,7 @@ header {
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   font-size: 1.1rem;
+  margin-bottom: 4rem;
 }
 .explorer button:hover {
   transform: scale(1.05);
@@ -127,13 +132,23 @@ header {
     transform: rotate(360deg);
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+  .explorer h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+}
 .tuto {
   counter-reset: steps;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+  margin-right: 2rem;
+}
+.tuto h2 {
+  margin: 4rem 0rem 2rem 2rem;
 }
 .tuto ol {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 @media (max-width: 1000px) {
   .tuto ol {
@@ -146,7 +161,7 @@ header {
   background-color: #f6f6f6;
   padding: 1.5rem 2rem;
   flex-grow: 1;
-  border-radius: 1rem;
+  border-radius: 1.4rem;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
 }
 .tuto li::before {
@@ -179,14 +194,17 @@ header {
 
 #homepage .menus {
   background-color: #f6f6f6;
-  margin-bottom: 2rem;
+  padding: 0 0 5rem 0;
+}
+#homepage .menus h2 {
+  padding: 3rem 0 2rem 1rem;
 }
 #homepage .menus .menus__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 770px) {
   #homepage .menus .menus__cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -198,13 +216,17 @@ header {
   content: "Nouveau";
   position: absolute;
   height: 2rem;
-  width: 5rem;
+  width: 6rem;
+  border-radius: 0.1rem;
   background-color: #99E2D0;
   color: #1b6150;
   display: grid;
   place-items: center;
-  right: 1rem;
+  right: 2rem;
   top: 1rem;
+}
+#homepage .menus .card {
+  padding: 0 1rem 0 1rem;
 }
 #homepage .menus .card__image {
   height: 15rem;
@@ -228,6 +250,7 @@ header {
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
 }
 #homepage .menus .card__description::before {
   display: inline-block;
@@ -240,8 +263,8 @@ header {
   font-weight: 400;
   content: "\f004";
   font-size: 2rem;
-  right: 10px;
-  top: 50%;
+  right: 30px;
+  top: 45%;
   transform: translateY(-50%);
   color: inherit;
   background-clip: text;
@@ -260,8 +283,8 @@ header {
   font-weight: 900;
   content: "\f004";
   font-size: 2rem;
-  right: 10px;
-  top: 50%;
+  right: 30px;
+  top: 45%;
   transform: translateY(-50%);
   color: transparent;
   background-clip: text;
@@ -277,10 +300,28 @@ header {
 }
 #homepage .menus .card h3,
 #homepage .menus .card p {
-  padding: 0.3rem;
-  margin-left: 10px;
+  padding: 0.1rem;
+  margin-left: 3px;
+  font-size: 19px;
+}
+#homepage .menus .card .heart {
+  margin-right: 5rem;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+  #homepage .menus {
+    padding: 0rem 8rem 1rem 8rem;
+  }
+  #homepage .menus h2 {
+    padding: 3rem 0 2rem 1rem;
+  }
+  #homepage .menus .card {
+    margin: 0rem 2rem 2rem 0rem;
+    min-width: 100%;
+    max-width: 50rem;
+    width: 100%;
+  }
+}
 footer {
   background-color: #353535;
   padding: 1rem 2rem;
@@ -298,6 +339,33 @@ footer i {
   margin-right: 10px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 0;
+    padding-top: 1.8rem;
+  }
+  footer .paragraph-1 {
+    gap: 4rem;
+    margin-right: 2.5rem;
+  }
+  footer h2 {
+    order: 1;
+    margin-left: 5rem;
+    margin-right: 1.5rem;
+    margin-top: -0.6rem;
+  }
+  footer p,
+  footer h2 {
+    gap: 2rem;
+  }
+  footer i {
+    margin-right: 5px;
+  }
+}
 @keyframes appear {
   0% {
     transform: translateY(50%);
@@ -307,6 +375,13 @@ footer i {
     transform: translateY(0);
     opacity: 1;
   }
+}
+* {
+  box-shadow: 0 0 0 3px red inset;
+}
+
+#page-resto header {
+  padding-top: 1rem;
 }
 #page-resto header:hover::before {
   transform: scale(1.2) translateY(-50%);
@@ -334,82 +409,55 @@ footer i {
   object-fit: cover;
   object-position: center;
 }
-#page-resto .restaurant__title {
-  margin-top: -2rem;
-  background-color: #f6f6f6;
-}
-#page-resto .restaurant__title .restaurant__title::before {
-  background-color: white;
-}
-#page-resto .restaurant__title h2 {
-  font-family: "Shrikhand", "sans-serif";
-  padding: 2.5rem 1rem;
-  font-size: 28px;
+#page-resto .restaurant-main {
   position: relative;
-  background-color: white;
-  border-radius: 0 0 1rem 1rem;
   background-color: #f6f6f6;
+  padding: 0.1rem 1rem 1rem 1rem;
+  margin-top: -2rem;
   border-radius: 2rem 2rem 0 0;
 }
-#page-resto .restaurant__title h2::before {
-  display: inline-block;
+#page-resto .restaurant-main .far.fa-heart {
   position: absolute;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f004";
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  right: 0;
   font-size: 2rem;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: inherit;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
+  margin-right: 3rem;
+  margin-top: -2.4rem;
 }
-#page-resto .restaurant__title h2::after {
-  display: inline-block;
+#page-resto .restaurant-main .fas.fa-heart {
   position: absolute;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
+  right: 0;
   font-size: 2rem;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-right: 3rem;
+  margin-top: -2.4rem;
   color: transparent;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   background-clip: text;
-  -webkit-background-clip: text;
   opacity: 0;
   transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
 }
-#page-resto .restaurant__title h2:hover::after {
+#page-resto .restaurant-main > .fas.fa-heart:hover {
   opacity: 1;
-  transform: translateY(-50%) scale(1.2);
-  animation: fill-heart 2s ease-in-out forwards;
+  transform: translateY(0%) scale(1.2);
 }
-#page-resto .restaurant-main {
+#page-resto .restaurant-main h2 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 31px;
   background-color: #f6f6f6;
-  margin-bottom: -3.6rem;
+  margin-top: 2.5rem;
+  margin-right: 3.5rem;
 }
 #page-resto .menus {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  margin-top: 1rem;
 }
 #page-resto h3 {
   text-transform: uppercase;
   font-weight: 200;
-  margin: 1.5rem 0 0.5rem 0;
+  margin: 1.5rem 0 0.5rem 0.1rem;
   position: relative;
 }
 #page-resto h3::after {
@@ -430,6 +478,7 @@ footer i {
   animation-fill-mode: both;
 }
 #page-resto .menu__category .menu-item {
+  height: 4.8rem;
   display: flex;
   overflow: hidden;
   animation: appear 1.5s;
@@ -446,12 +495,13 @@ footer i {
 #page-resto .menu__category .menu-item .menu-item__price {
   margin-left: auto;
   font-weight: 900;
+  font-size: 1.1rem;
   padding: 1rem;
   display: flex;
   align-items: flex-end;
 }
 #page-resto .menu__category .menu-item .menu-item__description {
-  padding: 1rem;
+  padding: 0.8rem;
   overflow: hidden;
 }
 #page-resto .menu__category .menu-item .menu-item__description h4,
@@ -459,10 +509,18 @@ footer i {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding: 0.1rem;
+}
+#page-resto .menu__category .menu-item .menu-item__description h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#page-resto .menu__category .menu-item .menu-item__description p {
+  font-size: 1.1rem;
 }
 #page-resto .menu__category .menu-item .menu-item__check {
   display: grid;
-  height: 4.5rem;
+  height: 4.8rem;
   flex-shrink: 0;
   place-items: center;
   border-radius: 0 1rem 1rem 0;
@@ -501,7 +559,8 @@ footer i {
   height: 25vh;
   display: grid;
   place-items: center;
-  margin-top: 0;
+  margin-top: -1rem;
+  margin-bottom: -1.5rem;
 }
 #page-resto div.order button {
   color: white;
@@ -516,49 +575,62 @@ footer i {
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   font-size: 1.1rem;
-  margin-top: 0;
-  margin-bottom: 3rem;
 }
 #page-resto div.order button:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-@media (min-width: 1050px) {
-  .restaurant__title {
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  #page-resto .restaurant__title {
+    min-width: 80%;
     border-radius: 2rem 2rem 0 0;
-    margin-left: 20rem;
-    margin-right: 20rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
   }
-  h2 {
+  #page-resto h2 {
     text-align: center;
   }
-  .restaurant-main {
-    background-color: #f6f6f6;
-    margin-bottom: -3.6rem;
-    margin-left: 20rem;
-    margin-right: 20rem;
+  #page-resto .fas.fa-heart {
+    align-items: center;
   }
-  footer {
+  #page-resto .restaurant-main {
+    min-width: 80%;
+    background-color: #f6f6f6;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  #page-resto .menus {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  #page-resto .menu__category {
+    min-width: 50%;
+  }
+  #page-resto footer {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
     margin-top: 0;
+    padding-top: 1.8rem;
+    gap: 1rem;
   }
-  footer h2 {
+  #page-resto footer .paragraph-1 {
+    gap: 4rem;
+    margin-right: 2.5rem;
+  }
+  #page-resto footer h3 {
     order: 1;
-    margin-left: 4rem;
+    margin-left: 5rem;
+    margin-right: 1.5rem;
+    margin-top: -0.6rem;
   }
-  footer p,
-  footer h2 {
-    gap: 1rem;
+  #page-resto footer p,
+  #page-resto footer h3 {
+    gap: 2rem;
   }
-  footer p .paragraph1,
-  footer h2 .paragraph1 {
-    gap: 1rem;
-  }
-  footer i {
+  #page-resto footer i {
     margin-right: 5px;
   }
 }

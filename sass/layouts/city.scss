@@ -1,15 +1,19 @@
+@use "../utils/colors";
+
 .city {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
   gap: 16px;
-  background-color: #f3f3f3;
-  padding: 8px;
+  background-color: colors.$grey;
+  padding: 1rem;
+
   & i {
-    font-size: 24px;
+    font-size: 20px;
   }
   h2 {
-    font-size: 1rem;
+    font-size: 17px;
+    font-weight: lighter;
   }
 }

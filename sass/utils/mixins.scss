@@ -35,8 +35,8 @@
       @include font-awesome($font-weight);
       content: "\f004";
       font-size: 2rem;
-      right: 10px;
-      top: 50%;
+      right: 30px;
+      top: 45%;
       transform: translateY(-50%);
       color: $color;
       background-clip: text;
@@ -47,8 +47,6 @@
     
     @mixin heart-animated {
     position: relative;
-    background-color: white;
-    border-radius: 0 0 1rem 1rem;
     &::before {
       @include heart;
     }

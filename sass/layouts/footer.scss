@@ -16,3 +16,36 @@ footer{
         margin-right: 10px;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 0;
+      padding-top: 1.8rem;
+
+        .paragraph-1 {
+          gap:4rem;
+          margin-right: 2.5rem;
+          
+        }  
+  
+        h2 {
+          order: 1;
+          margin-left: 5rem;
+        margin-right: 1.5rem;
+        margin-top: -0.6rem;
+        }
+        p,
+        h2 {
+          gap: 2rem;
+  
+        }
+        i {
+          margin-right: 5px;
+        }
+      }
+
+}

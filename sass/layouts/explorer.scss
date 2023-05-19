@@ -3,18 +3,25 @@
 
 /* EXPLORER */
 .explorer {
+  background-color: #f3f3f3;
   text-align: center;
-  margin: 2rem;
+  margin: -1rem 0rem -0.5rem 0rem;
+  
   & h2 {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    
+    margin: 0.8rem 3rem 1rem 3rem;
+    padding-top: 3rem;
+    font-size: 2rem;
   }
   & p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin: 0rem 1rem 1rem 1rem;
+    
   }
   & button {
     @include mixins.base-button;
     font-size: 1.1rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -53,4 +60,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+  .explorer {
+    & h2 {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+}
 }
