@@ -2,23 +2,22 @@
 @use "../utils/colors";
 @use "../utils/animations";
 
-*{
-    box-shadow: 0 0 0 3px red inset;
- }
+// * {
+//   box-shadow: 0 0 0 3px red inset;
+// }
 #page-resto {
   header {
-    padding-top: 1rem;
-    &:hover::before {
+    margin-top: -1rem;
+    .fa-solid.fa-arrow-left:hover::before {
       @include mixins.transform-zoom2(
         $zoom-level: 1.2,
         $transformation: translateY(-50%)
       );
     }
-    &::before {
+    .fa-solid.fa-arrow-left::before {
       @include mixins.font-awesome(900);
-      content: "\f060";
       left: 1rem;
-      top: 50%;
+      top: 60%;
       transform: translateY(-50%);
       font-size: 20px;
       transition: transform 200ms;
@@ -42,20 +41,18 @@
       position: absolute;
       justify-content: flex-end;
       flex-wrap: wrap;
-      right: 0;
+      right: 3rem;
       font-size: 2rem;
-      margin-right: 3rem;
       margin-top: -2.4rem;
     }
     .fas.fa-heart {
       position: absolute;
-      right: 0;
+      right: 3rem;
       font-size: 2rem;
-      margin-right: 3rem;
       margin-top: -2.4rem;
       color: transparent;
       @include mixins.gradient(1);
-      background-clip: text;
+      -webkit-background-clip: text;
       opacity: 0;
       transition: all 200ms ease-in-out;
     }
@@ -63,12 +60,13 @@
       opacity: 1;
       transform: translateY(0%) scale(1.2);
     }
+
     h2 {
       font-family: "Shrikhand", "sans-serif";
       font-size: 31px;
       background-color: colors.$lightergrey;
       margin-top: 2.5rem;
-      margin-right: 3.5rem;
+      margin-right: 4rem;
     }
   }
   .menus {
@@ -111,7 +109,7 @@
       animation: appear 1.5s;
       .menu-item__price {
         margin-left: auto;
-        font-weight: 900;
+        font-weight: 700;
         font-size: 1.1rem;
         padding: 1rem;
         display: flex;
@@ -129,7 +127,7 @@
         }
         h4 {
           font-size: 1.2rem;
-          font-weight: 600;
+          font-weight: 500;
         }
         p {
           font-size: 1.1rem;
@@ -150,7 +148,7 @@
           display: grid;
           place-items: center;
           background: white;
-          aspect-ratio: 1;
+          height: 2rem;
           width: 2rem;
           border-radius: 1rem;
           color: colors.$color-tertiary;
@@ -184,26 +182,32 @@
 @media screen and (min-width: 768px) and (max-width: 2000px) {
   #page-resto {
     .restaurant__title {
-      min-width: 80%;
+      min-width: 50%;
       border-radius: 2rem 2rem 0 0;
       margin-left: 10rem;
       margin-right: 10rem;
     }
     h2 {
       text-align: center;
+      margin-right: 1rem;
+    }
+    .far.fa-heart {
+      text-align: center;
+      left: 24rem;
     }
     .fas.fa-heart {
-    align-items: center;
+      text-align: center;
+      left: 24rem;
     }
     .restaurant-main {
-      min-width: 80%;
+      min-width: 50%;
       background-color: colors.$lightergrey;
       margin-left: 10rem;
       margin-right: 10rem;
     }
     .menus {
-      margin-left: 10rem;
-      margin-right: 10rem;
+      margin-left: 5rem;
+      margin-right: 5rem;
     }
     .menu__category {
       min-width: 50%;
