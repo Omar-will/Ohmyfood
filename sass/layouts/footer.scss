@@ -1,51 +1,50 @@
-@use"./../utils/colors";
+@use "./../utils/colors";
 
-footer{
-    background-color: colors.$darkgrey;
-    padding: 1rem 2rem;
-    color: white;
-    h2{
-        font-family: "Shrikhand", "sans serif";
-        font-weight: 500;
-        padding: 1rem 0;
-    }
-    p {
-        padding: 0.2rem;
-    }
-    i {
-        margin-right: 10px;
-    }
+footer {
+  background-color: colors.$darkgrey;
+  padding: 1rem 3rem;
+  padding-left: 2rem;
+  color: white;
+  h2 {
+    font-family: "Shrikhand", "sans serif";
+    font-weight: 500;
+    padding: 1rem 0;
+  }
+  p {
+    padding: 0.2rem;
+  }
+  i {
+    margin-right: 10px;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1800px) {
-    footer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        margin-top: 0;
-      padding-top: 1.8rem;
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -1rem;
+    padding-top: 2.2rem;
+    gap: 1rem;
 
-        .paragraph-1 {
-          gap:4rem;
-          margin-right: 2.5rem;
-          
-        }  
-  
-        h2 {
-          order: 1;
-          margin-left: 5rem;
-        margin-right: 1.5rem;
-        margin-top: -0.6rem;
-        }
-        p,
-        h2 {
-          gap: 2rem;
-  
-        }
-        i {
-          margin-right: 5px;
-        }
-      }
+    .paragraph-1 {
+      gap: 4rem;
+      margin-right: 2.5rem;
+    }
 
+    h2 {
+      order: 1;
+      margin-left: 5rem;
+      margin-right: 1.5rem;
+      margin-top: -0.6rem;
+    }
+    p,
+    h2 {
+      gap: 2rem;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
 }

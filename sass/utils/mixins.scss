@@ -1,19 +1,19 @@
 @use "../utils/colors";
 
 @mixin gradient($opacity: 0.9) {
-    background-image: linear-gradient(
-      to top,
-      rgb(147, 86, 220, $opacity),
-      rgba(255, 121, 218, $opacity)
-    );
-  }
+  background-image: linear-gradient(
+    to top,
+    rgb(147, 86, 220, $opacity),
+    rgba(255, 121, 218, $opacity)
+  );
+}
 
-  @mixin base-shadow {
-    box-shadow: 2px 1px 8px -3px colors.$lightgrey;
+@mixin base-shadow {
+  box-shadow: 2px 1px 8px -3px colors.$lightgrey;
 }
 
 @mixin transform-zoom {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 @mixin transform-zoom2($zoom-level: 1.02, $transformation: none) {
@@ -31,52 +31,22 @@
   font-weight: $font-weight;
 }
 
-@mixin heart ($opacity: 1, $font-weight: 400, $color: inherit) {
-      @include font-awesome($font-weight);
-      content: "\f004";
-      font-size: 2rem;
-      right: 30px;
-      top: 45%;
-      transform: translateY(-50%);
-      color: $color;
-      background-clip: text;
-      -webkit-background-clip: text;
-      opacity: $opacity;
-      transition: all 200ms ease-in-out;
-    }
-    
-    @mixin heart-animated {
-    position: relative;
-    &::before {
-      @include heart;
-    }
-    &::after {
-      @include heart($opacity: 0, $font-weight: 900, $color:transparent);
-      @include gradient(1);
-    }
-    &:hover::after {
-      opacity: 1;
-      transform: translateY(-50%) scale(1.2);
-      animation: fill-heart 2s ease-in-out forwards;
-    }
-}
-
 @mixin base-button {
-    color: white;
-    font-weight: 300;
-    font-size: 1.5rem;
-    padding: 1rem 1.7rem;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 2rem;
-    transition: transform 200ms;
-    cursor: pointer;
-    @include base-shadow;
-    @include gradient;
-    &:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 1.7rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 2rem;
+  transition: transform 200ms;
+  cursor: pointer;
+  @include base-shadow;
+  @include gradient;
+  &:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
 }
 
 @mixin base-button2 {
