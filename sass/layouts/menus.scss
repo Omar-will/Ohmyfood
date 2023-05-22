@@ -82,6 +82,19 @@
           opacity: 0;
           transition: all 200ms ease-in-out;
         }
+        .fas.fa-heart:hover {
+          opacity: 1;
+          transform: translateY(0%) scale(1.2);
+        }
+        input[type="checkbox"]:checked + .heart .fas.fa-heart {
+          opacity: 1;
+          transform: translateY(0%) scale(1.2);
+        }
+        input[type="checkbox"] {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+        }
       }
 
       h3,

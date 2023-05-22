@@ -287,6 +287,19 @@ header {
   opacity: 0;
   transition: all 200ms ease-in-out;
 }
+#homepage .menus .card__description .fas.fa-heart:hover {
+  opacity: 1;
+  transform: translateY(0%) scale(1.2);
+}
+#homepage .menus .card__description input[type=checkbox]:checked + .heart .fas.fa-heart {
+  opacity: 1;
+  transform: translateY(0%) scale(1.2);
+}
+#homepage .menus .card__description input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
 #homepage .menus .card h3,
 #homepage .menus .card p {
   padding: 0.1rem;
@@ -419,9 +432,16 @@ footer i {
   opacity: 0;
   transition: all 200ms ease-in-out;
 }
-#page-resto .restaurant-main > .fas.fa-heart:hover {
+#page-resto .restaurant-main .fas.fa-heart:hover {
   opacity: 1;
   transform: translateY(0%) scale(1.2);
+}
+#page-resto .restaurant-main input[type=checkbox]:checked + .heart .fas.fa-heart {
+  opacity: 1;
+  transform: translateY(0%) scale(1.2);
+}
+#page-resto .restaurant-main #heart-checkbox {
+  display: none;
 }
 #page-resto .restaurant-main h2 {
   font-family: "Shrikhand", "sans-serif";
