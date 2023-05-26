@@ -44,8 +44,9 @@
   @include base-shadow;
   @include gradient;
   &:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+    transform: scale(1.02);
+    opacity: 0.8;
+    box-shadow: 2px 1px 8px 1px colors.$lightgrey;
   }
 }
 
@@ -62,7 +63,8 @@
   @include base-shadow;
   @include gradient;
   &:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+    transform: scale(1.02);
+    opacity: 0.8;
+    box-shadow: 2px 1px 8px 1px colors.$lightgrey;
   }
 }

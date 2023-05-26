@@ -11,6 +11,10 @@
 ::after {
   box-sizing: border-box;
 }
+html {
+  max-width: 1500px;
+  margin: auto;
+}
 
 body {
   margin: 0px;

@@ -14,14 +14,23 @@
   </head>
 <!-- NAVBAR -->
   <body id="homepage">
-    <div class="loader"></div>
-    <header>
-      <h1>ohmyfood</h1> 
+    <div class="load">
+      <div class="load__rond"></div>
+      <div class="load__rond"></div>
+      <div class="load__rond"></div>
+      <p class="header__logo">
+        Ohmyfood
+      </p>
+    </div>
+    <header class="heading">
+      <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood" />
     </header>
         <!-- SEARCH -->
         <div class="city">
+          <label class="location__icon">
             <i class="fas fa-map-marker-alt"></i>
-            <h2>Paris, Belleville</h2>
+          </label>
+            <input class="location__input" type="text" name="location" placeholder="Paris, Belleville">
         </div>
       <!-- EXPLORER -->
       <main>
@@ -111,7 +120,7 @@
             <a href="#">Mentions légales</a>
         </p>
         <p>
-            <a href="#">Contact</a>
+            <a href="mailto:contact@ohmyfood.com">Contact</a>
         </p>
     </footer>
   </body>

@@ -2,8 +2,20 @@ header {
     font-family: "Shrikhand", cursive;
     text-align: center;
     box-shadow: 0 0 8px rgb(0 0 0 / 25%);
-    padding: 8px;
+    padding: 20px;
     position: relative;
   }
 
-  
+  .heading {
+    margin-bottom: 0;
+    height: 5.5rem;
+    text-align: center;
+    padding: 5px;
+    
+    img {
+      width: 188px;
+      height: 55px;
+      padding-top: 18px;
+      text-align: center;
+    }
+  }

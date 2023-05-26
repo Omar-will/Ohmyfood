@@ -19,3 +19,34 @@
       }
 }  
 
+@keyframes rotate-a {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+}
+
+@keyframes rotate-b {
+  0% {
+    transform: rotateX(55deg) rotateY(15deg) rotateZ(360deg);
+  }
+
+  100% {
+    transform: rotateX(55deg) rotateY(15deg) rotateZ(0deg);
+  }
+}
+
+@keyframes rotate-c {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+
+  100% {
+    transform: rotateX(35deg) rotateY(15deg) rotateZ(0deg);
+  }
+}
+
+

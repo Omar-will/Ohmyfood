@@ -5,15 +5,28 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  gap: 16px;
   background-color: colors.$grey;
   padding: 1rem;
+  gap: 0rem;
 
-  & i {
+  .location__icon {
     font-size: 20px;
+    margin-right: 0;
+    padding-left: 1.5rem;
   }
-  h2 {
-    font-size: 17px;
-    font-weight: lighter;
+  .location__input {
+    width: fit-content;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    color: black;
+    font-weight: 400;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    margin-left: -1.5rem;
+  }
+  .location__input:focus {
+    outline: none;
   }
 }
