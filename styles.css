@@ -13,7 +13,7 @@ html {
 
 body {
   margin: 0px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "sans-serif";
 }
 
 main {
@@ -106,22 +106,22 @@ header {
 }
 
 /* EXPLORER */
-.explorer {
+#homepage .explorer {
   background-color: #f3f3f3;
   text-align: center;
   margin: -1rem 0rem -0.5rem 0rem;
 }
-.explorer h2 {
+#homepage .explorer h2 {
   margin: 0.8rem 3rem 1rem 3rem;
   padding-top: 3rem;
   font-size: 2rem;
 }
-.explorer p {
+#homepage .explorer p {
   font-size: 1.2rem;
   font-weight: 200;
   margin: 0rem 1rem 1rem 1rem;
 }
-.explorer button {
+#homepage .explorer button {
   color: white;
   font-weight: 300;
   font-size: 1.5rem;
@@ -136,13 +136,12 @@ header {
   font-size: 1.1rem;
   margin-bottom: 4rem;
 }
-.explorer button:hover {
+#homepage .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.8;
   box-shadow: 2px 1px 8px 1px #7e7e7e;
 }
-
-.load {
+#homepage .load {
   z-index: 1;
   position: fixed;
   width: 100%;
@@ -154,7 +153,7 @@ header {
   align-items: center;
   justify-content: space-around;
 }
-.load__rond {
+#homepage .load__rond {
   position: absolute;
   width: 400px;
   height: 400px;
@@ -165,7 +164,7 @@ header {
   align-items: center;
   transform: translate(50%, 50%);
 }
-.load__rond:nth-child(1) {
+#homepage .load__rond:nth-child(1) {
   border-top-width: 15px;
   border-color: #ff79da;
   animation: rotate-a 3s linear both;
@@ -178,7 +177,7 @@ header {
     transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
   }
 }
-.load__rond:nth-child(2) {
+#homepage .load__rond:nth-child(2) {
   border-right-width: 15px;
   border-color: #9356dc;
   animation: rotate-b 3s linear both;
@@ -191,7 +190,7 @@ header {
     transform: rotateX(55deg) rotateY(15deg) rotateZ(0deg);
   }
 }
-.load__rond:nth-child(3) {
+#homepage .load__rond:nth-child(3) {
   border-left-width: 15px;
   border-color: #99e2d0;
   animation: rotate-c 3s linear both;
@@ -204,7 +203,7 @@ header {
     transform: rotateX(35deg) rotateY(15deg) rotateZ(0deg);
   }
 }
-.load .header__logo {
+#homepage .load .header__logo {
   position: relative;
   font-family: "Shrikhand", "sans serif";
   font-weight: 200;
@@ -218,19 +217,19 @@ header {
     transform: scale(0);
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 2000px) {
-  .explorer h2 {
+  #homepage .explorer h2 {
     margin-bottom: 2rem;
     font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
-  .load {
+  #homepage .load {
     margin-left: -2.5rem;
     margin-right: -3rem;
   }
 }
+
 .tuto {
   counter-reset: steps;
   margin-bottom: 5rem;
@@ -525,7 +524,7 @@ footer i {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   left: 1rem;
-  top: 65%;
+  top: 60%;
   transform: translateY(-50%);
   font-size: 20px;
   transition: transform 200ms;
@@ -622,6 +621,72 @@ footer i {
     transform: translateY(0);
     opacity: 1;
   }
+}
+#page-resto .menu__category:nth-child(13) {
+  animation-delay: 1300ms;
+}
+#page-resto .menu__category .menu-item {
+  height: 4.8rem;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+#page-resto .menu__category .menu-item__price {
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+#page-resto .menu__category .menu-item__description {
+  padding: 0.8rem;
+  overflow: hidden;
+}
+#page-resto .menu__category .menu-item__description h4,
+#page-resto .menu__category .menu-item__description p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0.1rem;
+}
+#page-resto .menu__category .menu-item__description h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#page-resto .menu__category .menu-item__description p {
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+#page-resto .menu__category .menu-item__check {
+  display: grid;
+  height: 4.8rem;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 0 1rem 1rem 0;
+  background-color: #99E2D0;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 0.5s;
+}
+#page-resto .menu__category .menu-item__check i {
+  display: grid;
+  place-items: center;
+  background: white;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 1rem;
+  color: #99E2D0;
+}
+#page-resto .menu__category .menu-item__check .menu-checkbox {
+  display: none;
+}
+#page-resto .menu__category input[type=checkbox] {
+  display: none;
+}
+#page-resto .menu__category input[type=checkbox]:checked + .menu-item__check {
+  margin-right: 0;
 }
 #page-resto .menu__category:nth-child(12) {
   animation-delay: 1200ms;
@@ -1507,7 +1572,7 @@ div.order button:hover {
     padding-bottom: 1rem;
   }
   #page-resto header .fa-solid.fa-arrow-left::before {
-    top: 60%;
+    top: 55%;
   }
   #page-resto .restaurant__title {
     min-width: 50%;

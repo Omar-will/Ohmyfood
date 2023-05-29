@@ -29,7 +29,7 @@
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       left: 1rem;
-      top: 65%;
+      top: 60%;
       transform: translateY(-50%);
       font-size: 20px;
       transition: transform 200ms;
@@ -133,7 +133,7 @@
       }
     }
     animation-fill-mode: both;
-    @for $i from 12 through 1 {
+    @for $i from 13 through 1 {
       &:nth-child(#{$i}) {
         animation-delay: 100ms * $i;
       }
@@ -305,7 +305,7 @@ div.order {
       padding-bottom: 1rem;
 
       .fa-solid.fa-arrow-left::before {
-        top: 60%;
+        top: 55%;
       }
     }
     .restaurant__title {

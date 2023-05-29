@@ -1,6 +1,8 @@
 @use "../utils/colors";
 
+
 /* EXPLORER */
+#homepage {
 .explorer {
   background-color: #f3f3f3;
   text-align: center;
@@ -136,5 +138,6 @@
   .load {
     margin-left: -2.5rem;
     margin-right: -3rem;
+}
 }
 }
