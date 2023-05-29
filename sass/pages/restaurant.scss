@@ -17,7 +17,6 @@
     margin-top: -0.5rem;
     .fa-solid.fa-arrow-left:hover::before {
       transform: scale(1.2) translateY(-50%);
-      transform: scale(1.02) none;
     }
     .fa-solid.fa-arrow-left::before {
       display: inline-block;
@@ -192,14 +191,8 @@
           border-radius: 1rem;
           color: colors.$color-tertiary;
         }
-        .menu-checkbox {
-          display: none;
-        }
       }
-      input[type="checkbox"] {
-        display: none;
-      }
-      input[type="checkbox"]:checked + .menu-item__check {
+      .menu-item:hover .menu-item__check {
         margin-right: 0;
       }
     }
@@ -281,20 +274,6 @@ div.order {
       margin-left: 8rem;
       margin-right: 8rem;
     }
-
-    .menu-checkbox {
-      display: none;
-    }
-    input[type="checkbox"]:checked + .menu-item__check {
-      margin-right: 0;
-    }
-    .menu-item:hover .menu-item__check {
-      margin-right: 0;
-    }
-    .menu-item:hover {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
   }
 }
 
@@ -374,19 +353,6 @@ div.order {
         border-radius: 1rem;
         color: colors.$color-tertiary;
       }
-    }
-    .menu-checkbox {
-      display: none;
-    }
-    input[type="checkbox"]:checked + .menu-item__check {
-      margin-right: 0;
-    }
-    .menu-item:hover .menu-item__check {
-      margin-right: 0;
-    }
-    .menu-item:hover {
-      margin-left: 0px;
-      margin-right: 0px;
     }
   }
 
